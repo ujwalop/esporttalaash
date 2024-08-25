@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Selection</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1c1c1c;
+            color: #ff9800;
+            padding: 20px;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+            padding: 0 10px;
+        }
+
+        .game-box {
+            background-color: #212121;
+            border: none;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            padding: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .game-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .game-box p {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffeb3b;
+            text-transform: uppercase;
+        }
+
+        .game-box:active {
+            transform: scale(0.98);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .game-box:hover img {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            color: #ff9800;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 20px;
+            }
+
+            .game-container {
+                flex-direction: column;
+            }
+
+            .game-box {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 18px;
+                padding: 15px;
+            }
+
+            .game-box p {
+                font-size: 16px;
+            }
+
+            footer {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .game-box {
+                padding: 15px;
+            }
+
+            .game-box p {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to esport tournament</h1>
+    </header>
+
+    <div class="game-container">
+        <button class="game-box" onclick="location.href='https://forms.gle/Lu2vrQqCnXmLQquCA';">
+            <img src="freefire_logo.png" alt="Free Fire">
+            <p>Free Fire</p>
+        </button>
+        <button class="game-box" onclick="location.href='https://forms.gle/sFSYe1qgjNGQvmfv9';">
+            <img src="bgmi_logo.png" alt="BGMI">
+            <p>BGMI</p>
+        </button>
+    </div>
+
+    <footer>
+        <p>Game made by Ujwal Guru</p>
+    </footer>
+</body>
+</html>
+
