@@ -357,6 +357,42 @@
             margin-bottom: 20px;
             color: #ccc;
         }
+        
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #e67e22;
+            color: #fff;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #f1c40f;
+        }
+/* Marquee Animation */
+.marquee {
+            background-color: #f1c40f;
+            color: #1f1f1f;
+            padding: 10px 0;
+            font-size: 20px;
+            font-weight: bold;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .marquee span {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+        }
+
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
 
         /* Media Queries */
         @media (max-width: 768px) {
@@ -377,12 +413,12 @@
 <body>
     <div class="opening-animation">
         <h1>Welcome to the Tournament!</h1>
-        <p>One Goal, One Winner!</p>
+        <p>Are you ready to compete?</p>
         <div class="made-by">Made by Ujwal Guru</div>
     </div>
 
     <header>
-        <h1>FEARLESS Esport Tournament</h1>
+        <h1>Fearless eSport Tournament</h1>
         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         <nav>
             <ul>
@@ -393,14 +429,12 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="mobile-menu" id="mobileMenu">
-            <a href="#home">Home</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#team">Team</a>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
-        </div>
+     
     </header>
+
+    <div class="marquee">
+        <span>Free Fire & BGMI Tournament on 28/08/2024 |  The timing will be declared soon! / Please don't call us. Instead, message us on WhatsApp or scroll down and click the 'Ask' button. We will solve your query. </span>
+    </div>
 
     <section id="home">
         <h2>Welcome to the Tournament</h2>
@@ -433,7 +467,7 @@
                 <img src="team1.jpeg" alt="Team Member 1">
                 <h3>Ujwal Guru
                 </h3>
-                <p>Esport incharge</p>
+                <p>Esport Incharge</p>
                 <p>PHONE NO.=8657955764</p>
             </div>
             <div class="team-member">
@@ -461,11 +495,14 @@
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Have questions or need more information? Reach out to us!</p>
+        <p>Have questions or need more information? Reach out to us!
+            Please don't call us. Instead, click the 'Ask' button. We will solve your query.
+        </p>
+        <a href="https://forms.gle/4wojZfSGb9EJFyHM7" target="_blank" class="btn">Ask</a>
     </section>
 
     <footer>
-        <p>&copy; 2024 made by ujwal guru. All rights reserved.</p>
+        <p>&copy; made by ujwal guru. All rights reserved.</p>
     </footer>
 
     <script>
@@ -476,4 +513,5 @@
     </script>
 </body>
 </html>
+
 
